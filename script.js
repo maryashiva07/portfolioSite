@@ -1,6 +1,4 @@
-/* =========================================
-   PORTFOLIO CONFIG
-========================================= */
+/* PORTFOLIO CONFIG */
 
 const portfolioLinks = {
   nirogaGithub: "https://github.com/maryashiva07/NirogaHub",
@@ -16,9 +14,7 @@ const portfolioLinks = {
   expenseLive: "https://expensetrackerx.onrender.com/",
 };
 
-/* =========================================
-   DOM
-========================================= */
+/* DOM */
 
 const menuToggle = document.getElementById("menuToggle");
 
@@ -30,9 +26,7 @@ const hero = document.getElementById("home");
 
 const heroPhoto = document.getElementById("heroPhoto");
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+/*  MOBILE MENU */
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -42,10 +36,23 @@ if (menuToggle) {
   });
 }
 
-/* =========================================
-   CLOSE MOBILE MENU
-   AFTER CLICKING NAV LINK
-========================================= */
+/* CLOSE MOBILE MENU */
+
+/* CLOSE MOBILE MENU WHEN CLICKING OUTSIDE */
+
+document.addEventListener("click", (event) => {
+  if (
+    navLinks &&
+    menuToggle &&
+    navLinks.classList.contains("open") &&
+    !navLinks.contains(event.target) &&
+    !menuToggle.contains(event.target)
+  ) {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
 
 navItems.forEach((link) => {
   link.addEventListener("click", () => {
@@ -55,9 +62,7 @@ navItems.forEach((link) => {
   });
 });
 
-/* =========================================
-   SMOOTH SCROLL
-========================================= */
+/* SMOOTH SCROLL */
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -82,9 +87,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-/* =========================================
-   ACTIVE NAV LINK
-========================================= */
+/* ACTIVE NAV LINK */
 
 const sections = document.querySelectorAll("main section[id]");
 
@@ -114,17 +117,7 @@ const updateActiveNav = () => {
 
 window.addEventListener("scroll", updateActiveNav, { passive: true });
 
-/* =========================================
-   HERO PHOTO STICKY
-========================================= */
-
-/*
-   Photo sticky rahegi jab tak user
-   hero ke approximately 30% scroll
-   point tak nahi pahunchta.
-
-   Uske baad normal flow me aa jayegi.
-*/
+/* PHOTO */
 
 const updateHeroPhoto = () => {
   if (!hero || !heroPhoto || window.innerWidth <= 768) {
@@ -152,9 +145,7 @@ window.addEventListener("scroll", updateHeroPhoto, { passive: true });
 
 window.addEventListener("resize", updateHeroPhoto);
 
-/* =========================================
-   PROJECT LINKS
-========================================= */
+/*  PROJECT LINKS */
 
 document.querySelectorAll("[data-link]").forEach((link) => {
   const key = link.dataset.link;
@@ -174,9 +165,7 @@ document.querySelectorAll("[data-link]").forEach((link) => {
   link.href = url;
 });
 
-/* =========================================
-   CURRENT YEAR
-========================================= */
+/* CURRENT YEAR*/
 
 const currentYear = document.getElementById("currentYear");
 
@@ -184,9 +173,7 @@ if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
 
-/* =========================================
-   INITIAL
-========================================= */
+/*INITIAL */
 
 updateActiveNav();
 
@@ -197,9 +184,7 @@ updateHeroPhoto();
 
 
 
-/* ================================
-   SCROLL REVEAL ANIMATION
-================================ */
+/* SCROLL ANIMATION */
 
 const revealElements = document.querySelectorAll(
   ".section-heading, " +
