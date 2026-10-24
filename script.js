@@ -36,8 +36,6 @@ if (menuToggle) {
   });
 }
 
-/* CLOSE MOBILE MENU */
-
 /* CLOSE MOBILE MENU WHEN CLICKING OUTSIDE */
 
 document.addEventListener("click", (event) => {
@@ -53,6 +51,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
+/* CLOSE MOBILE MENU */
 
 navItems.forEach((link) => {
   link.addEventListener("click", () => {
@@ -179,22 +178,17 @@ updateActiveNav();
 
 updateHeroPhoto();
 
-
-
-
-
-
 /* SCROLL ANIMATION */
 
 const revealElements = document.querySelectorAll(
   ".section-heading, " +
-  ".about-content, " +
-  ".skill-card, " +
-  ".experience-card, " +
-  ".project-card, " +
-  ".achievement-card, " +
-  ".education-card, " +
-  ".contact-content"
+    ".about-content, " +
+    ".skill-card, " +
+    ".experience-card, " +
+    ".project-card, " +
+    ".achievement-card, " +
+    ".education-card, " +
+    ".contact-content",
 );
 
 revealElements.forEach((element) => {
@@ -214,8 +208,8 @@ const revealObserver = new IntersectionObserver(
   },
   {
     threshold: 0.12,
-    rootMargin: "0px 0px -35px 0px"
-  }
+    rootMargin: "0px 0px -35px 0px",
+  },
 );
 
 revealElements.forEach((element) => {
