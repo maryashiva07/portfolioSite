@@ -1,6 +1,4 @@
-/* =========================================
-   GLOBAL
-========================================= */
+/* GLOBAL*/
 
 * {
   margin: 0;
@@ -44,10 +42,6 @@ img {
 .section-alt {
   background: #090d15;
 }
-
-/* =========================================
-   NAVBAR
-========================================= */
 
 .navbar {
   position: fixed;
@@ -165,10 +159,6 @@ img {
 
   transition: 0.3s;
 }
-
-/* =========================================
-   HERO
-========================================= */
 
 .hero {
   min-height: 100vh;
@@ -291,10 +281,6 @@ img {
   margin-bottom: 23px;
 }
 
-/* =========================================
-   HERO TAGS
-========================================= */
-
 .hero-tags {
   display: flex;
 
@@ -318,10 +304,6 @@ img {
 
   font-size: 12px;
 }
-
-/* =========================================
-   BUTTONS
-========================================= */
 
 .hero-actions {
   display: flex;
@@ -373,10 +355,6 @@ img {
   transform: translateY(-3px);
 }
 
-/* =========================================
-   SOCIAL
-========================================= */
-
 .social-links {
   display: flex;
 
@@ -408,10 +386,6 @@ img {
 
   transform: translateY(-2px);
 }
-
-/* =========================================
-   HERO PHOTO
-========================================= */
 
 .hero-photo {
   width: 100%;
@@ -487,10 +461,6 @@ img {
   align-self: start;
 }
 
-/* =========================================
-   SCROLL INDICATOR
-========================================= */
-
 .scroll-indicator {
   position: absolute;
 
@@ -526,10 +496,6 @@ img {
   transform: rotate(45deg);
 }
 
-/* =========================================
-   SECTION HEADING
-========================================= */
-
 .section-heading {
   margin-bottom: 38px;
 
@@ -551,10 +517,6 @@ img {
 
   line-height: 1.6;
 }
-
-/* =========================================
-   ABOUT
-========================================= */
 
 .about-grid {
   display: grid;
@@ -596,10 +558,6 @@ img {
   font-weight: 600;
 }
 
-/* =========================================
-   STATS
-========================================= */
-
 .stats-grid {
   display: grid;
 
@@ -637,10 +595,6 @@ img {
 
   font-size: 12px;
 }
-
-/* =========================================
-   SKILLS
-========================================= */
 
 .skill-groups {
   display: grid;
@@ -733,10 +687,6 @@ img {
 
   font-weight: 700;
 }
-
-/* =========================================
-   EXPERIENCE
-========================================= */
 
 .experience-card {
   position: relative;
@@ -834,10 +784,6 @@ img {
   line-height: 1.6;
 }
 
-/* =========================================
-   TAG LIST
-========================================= */
-
 .tag-list {
   display: flex;
 
@@ -859,10 +805,6 @@ img {
 
   font-size: 10px;
 }
-
-/* =========================================
-   PROJECTS
-========================================= */
 
 .project-grid {
   display: grid;
@@ -1118,10 +1060,6 @@ img {
   background: #111827;
 }
 
-/* =========================================
-   ACHIEVEMENTS
-========================================= */
-
 .achievement-grid {
   display: grid;
 
@@ -1190,10 +1128,6 @@ img {
   margin-bottom: 8px;
 }
 
-/* =========================================
-   EDUCATION
-========================================= */
-
 .education-card {
   display: flex;
 
@@ -1253,10 +1187,6 @@ img {
 
   line-height: 1.6;
 }
-
-/* =========================================
-   CONTACT
-========================================= */
 
 .contact-card {
   display: grid;
@@ -1368,10 +1298,6 @@ img {
   color: #5e6879;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
-
 .footer {
   border-top: 1px solid #1c222d;
 
@@ -1406,9 +1332,7 @@ img {
   font-size: 12px;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* TAB */
 
 @media (min-width: 769px) and (max-width: 1100px) {
   .nav-links {
@@ -1476,9 +1400,7 @@ img {
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/*  MOBILE */
 
 @media (max-width: 768px) {
   .section {
@@ -1731,9 +1653,7 @@ img {
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/*  SMALL MOBILE */
 
 @media (max-width: 430px) {
   .hero h1 {
@@ -1761,10 +1681,6 @@ img {
   }
 }
 
-/* =========================
-   HERO PHOTO
-========================= */
-
 .hero-photo-column {
   display: flex;
   justify-content: center;
@@ -1787,12 +1703,9 @@ img {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/*  MOBILE */
 
 @media (max-width: 760px) {
-
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -1834,14 +1747,7 @@ img {
   }
 }
 
-
-
-
-
-
-/* ================================
-   MODERN REVEAL ANIMATIONS
-================================ */
+/*  ANIMATIONS */
 
 :root {
   --animation-duration: 0.8s;
@@ -1929,12 +1835,7 @@ img {
 
 /* Modern gradient text */
 .gradient-text {
-  background: linear-gradient(
-    100deg,
-    #a78bfa 0%,
-    #22d3ee 50%,
-    #f472b6 100%
-  );
+  background: linear-gradient(100deg, #a78bfa 0%, #22d3ee 50%, #f472b6 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
